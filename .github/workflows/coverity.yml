@@ -27,5 +27,5 @@ jobs:
     # Perform Static Analysis
     - name: Polaris (SAST)
       run: |
-        cov-build --dir idir --fs-capture-search . python3 .
+        cov-build --dir idir --fs-capture-search . --no-command 
         cov-analyze --dir idir --all --webapp-security --enable-audit-mode
